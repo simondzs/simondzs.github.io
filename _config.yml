@@ -10,15 +10,15 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                  : "minimal-mistakes-jekyll"
+# theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dora Simon"
+title                    : "Dóra Zsuzsanna Simon"
 title_separator          : "-"
-subtitle                 : "Researcher. Economis. Job Market Candidate." # site tagline that appears below site title in masthead
+subtitle                 : "Researcher. Economist. Job Market Candidate." # site tagline that appears below site title in masthead
 name                     : "Dóra Zsuzsanna Simon"
 description              : "Dora Simon's personal website."
 url                      : "https://simondzs.github.io"
@@ -81,14 +81,17 @@ og_image                 : # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+      - "https://www.linkedin.com/in/dora-simon-economist/"
+      - "https://twitter.com/simon_dzs"
+      - "https://www.instagram.com/simon_dzs/" # An array of links to social media profiles
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "UA-161794928-1"
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
@@ -117,6 +120,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/simon_dzs/"
+    - label: "LnkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/dora-simon-economist/"
 
 # Site Footer
 footer:
@@ -139,7 +145,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/simon_dzs/"
-
+    - label: "LnkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/dora-simon-economist/"
 
 # Reading Files
 include:
