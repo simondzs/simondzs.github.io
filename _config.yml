@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-theme: jekyll-theme-minimal
-=======
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
@@ -19,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Econ Job Market Candidate 2020"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "Dóra Zsuszanna Simon"
 description              : "An amazing website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -282,4 +279,3 @@ defaults:
       comments: # true
       share: true
       related: true
->>>>>>> d6444412c63aea5e47241ef536509fb1bfef4830
