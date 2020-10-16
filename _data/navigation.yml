@@ -10,3 +10,13 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "About"
+    url: https://simondzs.github.io/about/
+  - title: "CV"
+    url: https://simondzs.github.io/cv/
+  - title: "Research"
+    url: https://simondzs.github.io/research/
+  - title: "Teaching"
+    url: https://simondzs.github.io/teaching/
+  - title: "Contact"
+    url: https://simondzs.github.io/contact/
