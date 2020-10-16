@@ -1,6 +1,10 @@
 ---
 title: "CV"
 author_profile: false
+link: 
 ---
 
-Soon, you will be able to download my CV here.
+Soon, you will be able to download my CV [here](https://www.google.com).
+
+          <a href="/media/resume.pdf" >
+          </a>
