@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Dóra Zsuzsanna Simon"
 title_separator          : "-"
-subtitle                 : "Researcher. Economist. Job Market Candidate." # site tagline that appears below site title in masthead
+subtitle                 : "Researcher in International Trade and Environmental Economics." # site tagline that appears below site title in masthead
 name                     : "Dóra Zsuzsanna Simon"
 description              : "Dora Simon's personal website."
 url                      : "https://simondzs.github.io"
