@@ -13,12 +13,12 @@
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+# looking nice: contrast, dark, mint, default
 # Site Settings
 locale                   : "en-US"
 title                    : "Dóra Zsuzsanna Simon"
 title_separator          : "-"
-subtitle                 : "Researcher in International Trade and Environmental Economics." # site tagline that appears below site title in masthead
+subtitle                 : "International Trade and Environmental Economist" # site tagline that appears below site title in masthead
 name                     : "Dóra Zsuzsanna Simon"
 description              : "Dora Simon's personal website."
 url                      : "https://simondzs.github.io"
