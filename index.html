@@ -1,6 +1,393 @@
----
-layout: home
-author_profile: true
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dóra Simon (Dora Simon)</title>
+  <meta name="description" content="Dóra (Dora) Zsuzsanna Simon, Assistant Professor of Economics at the University of Stavanger Business School. International trade and environmental economics.">
+  <meta property="og:title" content="Dóra Simon">
+  <meta property="og:description" content="Assistant Professor of Economics, University of Stavanger Business School. International trade and environmental economics.">
+  <meta property="og:image" content="https://simondzs.github.io/assets/images/dora-simon.jpg">
+  <meta property="og:url" content="https://simondzs.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' fill='%23f7f5f0' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f5f0;
+      --card: #fffdf9;
+      --ink: #1c1f1d;
+      --muted: #5c625e;
+      --rule: #dfdad0;
+      --accent: #2f5d50;
+      --accent-soft: #e4ece7;
+      --contour: rgba(47, 93, 80, 0.10);
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #131615;
+        --card: #1a1e1c;
+        --ink: #e8e6e1;
+        --muted: #a2a8a4;
+        --rule: #2d3330;
+        --accent: #8cc2ab;
+        --accent-soft: #1f2d28;
+        --contour: rgba(140, 194, 171, 0.08);
+      }
+    }
+    :root[data-theme="dark"] {
+      --paper: #131615; --card: #1a1e1c; --ink: #e8e6e1; --muted: #a2a8a4;
+      --rule: #2d3330; --accent: #8cc2ab; --accent-soft: #1f2d28; --contour: rgba(140, 194, 171, 0.08);
+    }
 
-<!-- <embed src="https://simondzs.github.io/_media/simonsulaja-consumptionslowdown.pdf" width="100%" height="850px"/> -->
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 17px/1.6 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Faint topographic rings in the top corner */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -420px; right: -420px;
+      width: 1100px; height: 1100px;
+      background: repeating-radial-gradient(circle at center, transparent 0 34px, var(--contour) 34px 35px);
+      -webkit-mask-image: radial-gradient(circle at center, #000 20%, transparent 68%);
+              mask-image: radial-gradient(circle at center, #000 20%, transparent 68%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .wrap {
+      position: relative; z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0 72px;
+    }
+    @media (min-width: 960px) {
+      .wrap { grid-template-columns: 330px 1fr; padding: 0 40px; }
+      .side { position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: auto; }
+    }
+
+    /* ---------- Sidebar ---------- */
+    .side { padding: 48px 0 32px; }
+    .portrait {
+      width: 200px; aspect-ratio: 4 / 5;
+      border-radius: 200px 200px 6px 6px;   /* arch */
+      overflow: hidden;
+      background: var(--rule);
+      margin-bottom: 28px;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+    h1 {
+      font: 500 2.25rem/1.1 var(--serif);
+      letter-spacing: -0.01em;
+      margin: 0 0 12px;
+    }
+    .role { margin: 0 0 4px; font-weight: 500; }
+    .inst { margin: 0 0 18px; color: var(--muted); }
+    .fields {
+      font: italic 400 1.05rem/1.4 var(--serif);
+      color: var(--accent);
+      margin: 0 0 24px;
+    }
+    .links { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .links a {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 10px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      font-size: 0.9rem; font-weight: 500;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--card);
+      transition: border-color .15s, color .15s;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+    .links a.primary { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+    .links a.primary:hover { color: var(--paper); filter: brightness(1.1); }
+    .links svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
+
+    .toc { border-top: 1px solid var(--rule); padding-top: 18px; display: none; }
+    .toc a {
+      display: block; padding: 3px 0;
+      color: var(--muted); text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .toc a:hover { color: var(--accent); }
+    @media (min-width: 960px) { .toc { display: block; } }
+
+    /* ---------- Main ---------- */
+    main { padding: 24px 0 48px; min-width: 0; }
+    @media (min-width: 960px) { main { padding-top: 48px; } }
+    .intro {
+      font: 400 1.3rem/1.55 var(--serif);
+      max-width: 44em;
+      margin: 0 0 56px;
+    }
+    section { margin-bottom: 64px; }
+    h2 {
+      font: 500 0.8rem/1 var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 14px;
+      margin: 0 0 8px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+    h3 {
+      font: 500 1.6rem/1.2 var(--serif);
+      margin: 40px 0 4px;
+    }
+    h3:first-of-type { margin-top: 20px; }
+
+    /* Papers */
+    .paper { padding: 22px 0; border-bottom: 1px solid var(--rule); }
+    .paper:last-child { border-bottom: 0; }
+    .paper-title {
+      font: 500 1.28rem/1.3 var(--serif);
+      margin: 0 0 4px;
+    }
+    .paper-title a { color: var(--ink); text-decoration: none; }
+    .paper-title a:hover { color: var(--accent); }
+    .authors { color: var(--muted); margin: 0; font-size: 0.97rem; }
+    .status { margin: 6px 0 0; font: italic 400 1.02rem/1.4 var(--serif); }
+    .status .tag {
+      font: 600 0.72rem/1 var(--sans); font-style: normal;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: var(--accent-soft); color: var(--accent);
+      padding: 4px 8px; border-radius: 4px; margin-right: 8px;
+      vertical-align: 2px;
+    }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin-top: 10px; font-size: 0.92rem; font-weight: 500; }
+    .actions a { text-decoration: none; }
+    .actions a:hover { text-decoration: underline; }
+    details.abstract[open] { flex-basis: 100%; }
+    details.abstract summary {
+      cursor: pointer; list-style: none;
+      color: var(--accent); display: inline-flex; align-items: center; gap: 5px;
+    }
+    details.abstract summary::-webkit-details-marker { display: none; }
+    details.abstract summary::before {
+      content: ""; width: 6px; height: 6px;
+      border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+      transform: rotate(-45deg); transition: transform .15s;
+      margin-right: 3px;
+    }
+    details.abstract[open] summary::before { transform: rotate(45deg) translate(-2px, -1px); }
+    details.abstract p {
+      margin: 10px 0 0; max-width: 46em;
+      font-weight: 400; font-size: 0.98rem; color: var(--ink);
+      border-left: 2px solid var(--accent-soft); padding-left: 16px;
+    }
+    .wip .paper { padding: 14px 0; }
+
+    /* Teaching */
+    .courses { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 0 48px; }
+    @media (min-width: 720px) { .courses { grid-template-columns: 1fr 1fr; } }
+    .courses li { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+    .courses .c { font: 500 1.08rem/1.3 var(--serif); display: block; }
+    .courses .d { color: var(--muted); font-size: 0.92rem; }
+    .teach-inst { font: 600 0.95rem/1.3 var(--sans); margin: 28px 0 0; }
+
+    /* Contact */
+    .contact { display: grid; gap: 24px; margin-top: 16px; }
+    @media (min-width: 720px) { .contact { grid-template-columns: 1fr 1fr; } }
+    .contact address { font-style: normal; line-height: 1.7; }
+
+    footer {
+      color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="side">
+    <div class="portrait">
+      <img src="assets/images/dora-simon.jpg" alt="Portrait of Dóra Simon" width="720" height="900">
+    </div>
+    <h1>Dóra Simon</h1>
+    <p class="role">Assistant Professor of Economics</p>
+    <p class="inst">University of Stavanger Business School</p>
+    <p class="fields">International Trade &middot; Environmental Economics</p>
+
+    <ul class="links">
+      <li><a class="primary" href="_media/simondzs-cv.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H4V2h2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5z"/></svg>CV</a></li>
+      <li><a class="mail" href="#contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg>Email</a></li>
+      <li><a href="https://www.linkedin.com/in/dora-simon-economist/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4V9.5z"/></svg>LinkedIn</a></li>
+      <li><a href="https://x.com/simon_dzs" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg>X</a></li>
+      <li><a href="https://scholar.google.com/citations?user=5eIsREEAAAAJ" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2zm-6.5 11.2V17c0 1.66 2.9 4 6.5 4s6.5-2.34 6.5-4v-3.8L12 17.3l-6.5-4.1z"/></svg>Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0004-7095-5061" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.2 7.1a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zM7.5 10h1.4v7H7.5v-7zm3 0h3.2c2.3 0 3.8 1.6 3.8 3.5S16 17 13.7 17h-3.2v-7zm1.4 1.3v4.4h1.7c1.5 0 2.4-1 2.4-2.2s-.9-2.2-2.4-2.2h-1.7z"/></svg>ORCID</a></li>
+      <li><a href="https://bsky.app/profile/simondzs.bsky.social" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.8 3.9c2.5 1.9 5.2 5.7 6.2 7.7 1-2 3.7-5.8 6.2-7.7 1.8-1.3 4.8-2.4 4.8 1 0 .7-.4 5.6-.6 6.4-.8 2.8-3.6 3.5-6.1 3.1 4.4.8 5.5 3.3 3.1 5.8-4.6 4.7-6.6-1.2-7.1-2.7l-.3-.8-.3.8c-.5 1.5-2.5 7.4-7.1 2.7-2.4-2.5-1.3-5 3.1-5.8-2.5.4-5.3-.3-6.1-3.1C1.4 10.5 1 5.6 1 4.9c0-3.4 3-2.3 4.8-1z"/></svg>Bluesky</a></li>
+      <!-- Add more links by copying a line above -->
+    </ul>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <main>
+    <p class="intro">
+      I am an Assistant Professor at the University of Stavanger Business School in Norway.
+      I work on international trade and environmental economics: how trade and climate policy
+      shape where emissions happen, who bears the costs, and how consumers respond.
+      I received my PhD from the University of Zurich in 2021.
+    </p>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <!-- ===================== WORKING PAPERS ===================== -->
+      <h3>Working Papers</h3>
+
+      <article class="paper">
+        <p class="paper-title"><a href="_media/llors-greeningricardo.pdf" target="_blank" rel="noopener">Greening Ricardo: Environmental Comparative Advantage and the Environmental Gains From Trade</a></p>
+        <p class="authors">with Mathilde Le Moigne, Simon Lepot, Ralph Ossa, and Marcos Ritel</p>
+        <p class="status"><span class="tag">Conditionally accepted</span><em>Journal of the Association of Environmental and Resource Economists</em></p>
+        <div class="actions">
+          <a href="_media/llors-greeningricardo.pdf" target="_blank" rel="noopener">PDF</a>
+          <details class="abstract"><summary>Abstract</summary>
+            <p>We show that climate policy can unlock large environmental gains from trade by inducing economies to specialize according to their environmental comparative advantage. We explore the effects of a carbon tax in a quantitative trade model. In our benchmark, a $100/tCO<sub>2</sub>e carbon tax reduces global greenhouse gas emissions by 44.7%. The environmental gains from trade account for roughly one-third of the abatement from the non-technique margins—scale, industry composition, and international sourcing—with the technique effect the largest margin. This finding holds for a wide range of carbon tax rates and sufficiently broad policy coverage.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title"><a href="_media/simondzs-tme.pdf" target="_blank" rel="noopener">To Beef, or Not To Beef: Trade, Meat, and the Environment</a></p>
+        <p class="authors">Single-authored, 2026</p>
+        <div class="actions">
+          <a href="_media/simondzs-tme.pdf" target="_blank" rel="noopener">PDF</a>
+          <details class="abstract"><summary>Abstract</summary>
+            <p>Consumers adjust their diets for environmental reasons, yet the emissions consequences remain unknown. I estimate a nested logit demand system for protein-rich foods using bar code-level data from a European retailer, linked to product-level emissions intensities. Accounting for substitution can reverse the sign of a policy’s emissions effect: buying local yields at best a small reduction and, under naive accounting, an increase. Removing beef and cheese lowers emissions by about 35%, vegetarianism by about 20%, and Pigouvian carbon taxes by up to 6%. My estimates imply an across- to within-group substitution ratio within the range of quantitative trade-and-climate calibrations.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title"><a href="_media/lrs-trump-trade-emissions.pdf" target="_blank" rel="noopener">Trump, Trade, and Emissions</a></p>
+        <p class="authors">with Simon Lepot and Marcos Ritel, 2025</p>
+        <div class="actions">
+          <a href="_media/lrs-trump-trade-emissions.pdf" target="_blank" rel="noopener">PDF</a>
+          <details class="abstract"><summary>Abstract</summary>
+            <p>This paper examines the unintended effects of noncooperative tariff hikes on global greenhouse gas emissions. Using a multi-country, multi-industry quantitative trade policy model, we evaluate protectionist and retaliatory scenarios shaped by the current geopolitical landscape and assess their impact on the carbon footprint of international trade. Our findings reveal that while noncooperative tariffs suppress economic activity – leading to modest emission reductions – they also restructure trade networks in ways that increase reliance on carbon-intensive production. As a result, arbitrary protectionist measures risk driving globalization towards a less sustainable path.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title"><a href="_media/simonsulaja-consumptionslowdown.pdf" target="_blank" rel="noopener">Consumption Slowdown after the Great Recession</a></p>
+        <p class="authors">with Vladimir Sulaja, 2025</p>
+        <div class="actions">
+          <a href="_media/simonsulaja-consumptionslowdown.pdf" target="_blank" rel="noopener">PDF</a>
+          <a href="_media/simonsulaja-consumptionslowdown-appendix.pdf" target="_blank" rel="noopener">Online appendix</a>
+          <details class="abstract"><summary>Abstract</summary>
+            <p>Consumption growth in the United States slowed markedly following the 2007–2009 financial crisis. We argue that costly regulatory interventions targeting banks with foreclosure-related misconduct contributed to this decline by constraining credit supply. Using variation in county-level exposure to affected banks, we show that tighter regulatory controls reduced mortgage loan origination, leading to weaker house price recoveries and lower household wealth. We find that consumption growth slowed more in counties more exposed to these banks, consistent with a wealth effect transmitted through housing markets. The decline in mortgage lending reflects a reduction in the number of loans rather than in average loan size, suggesting that regulation operated primarily through extensive-margin credit supply.</p>
+          </details>
+        </div>
+      </article>
+
+      <!-- ===================== WORK IN PROGRESS ===================== -->
+      <h3>Work in Progress</h3>
+      <div class="wip">
+        <article class="paper">
+          <p class="paper-title">International Trade and Food Shocks</p>
+          <p class="authors">with Angelo Marcantonio and Marcos Ritel</p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">A General Equilibrium Measure of Climate Ambition</p>
+          <p class="authors">with Simon Lepot and Marcos Ritel</p>
+        </article>
+      </div>
+
+      <!-- ===================== PUBLICATIONS ===================== -->
+      <h3>Publications</h3>
+
+      <article class="paper">
+        <p class="paper-title"><a href="https://doi.org/10.1016/j.jinteco.2026.104228" target="_blank" rel="noopener">The Distributional Effects of Carbon Pricing Across Countries</a></p>
+        <p class="authors">with Mathilde Le Moigne, Simon Lepot, and Marcos Ritel</p>
+        <p class="status"><span class="tag">Published</span><em>Journal of International Economics</em>, 2026</p>
+        <div class="actions">
+          <a href="https://doi.org/10.1016/j.jinteco.2026.104228" target="_blank" rel="noopener">Journal version</a>
+          <a href="https://www.youtube.com/watch?v=9p2SUzHtVDg&amp;list=PL2gnsP0zo0wc1LEsaTJ--SZJgs-H6saK3&amp;index=7&amp;t=3230s" target="_blank" rel="noopener">Video (presented by Marcos Ritel)</a>
+          <details class="abstract"><summary>Abstract</summary>
+            <p>We use a quantitative international trade model with climate policies to explore the distributional effects of carbon pricing across countries. Our analysis addresses two key questions facing global climate action: which countries bear the greatest burden of climate policies, and how these policies can be designed to ensure fairness. We present three main findings. First, efficient climate policies that disregard distributional concerns significantly exacerbate between-country inequality. Second, equity can be achieved alongside efficiency when climate policies are complemented by economically feasible international transfers, either equalizing carbon tax costs or accounting for historical emissions, with minimal economic impact on high-income countries. Third, carbon tax schemes with heterogeneous pricing – featuring lower rates for low- and middle-income countries – do not necessarily result in fairer outcomes.</p>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <p class="teach-inst">University of Stavanger</p>
+      <ul class="courses">
+        <li><span class="c">International Macroeconomics</span><span class="d">Master &middot; Spring, 2026</span></li>
+        <li><span class="c">Environmental and Resource Economics</span><span class="d">Master &middot; Fall, since 2021</span></li>
+        <li><span class="c">Writing for Business Students</span><span class="d">Master bootcamp &middot; Fall, 2023-2024</span></li>
+        <li><span class="c">Data Analysis</span><span class="d">Master &middot; Fall, 2021–2023</span></li>
+        <li><span class="c">Research Methods &amp; Econometrics</span><span class="d">Master &middot; Spring, 2022–2023</span></li>
+        <li><span class="c">Time Management for Business Students</span><span class="d">Master bootcamp &middot; 2022</span></li>
+      </ul>
+
+      <p class="teach-inst">University of Zurich</p>
+      <ul class="courses">
+        <li><span class="c">Sustainability in Food Supply</span><span class="d">Executive Education &middot; Lecturer &middot; Fall 2023-2024</span></li>
+        <li><span class="c">International Trade</span><span class="d">Bachelor &middot; Teaching assistant &middot; Fall 2017-2018</span></li>
+        <li><span class="c">Cross Section and Panel Data Econometrics</span><span class="d">Master &middot; Teaching assistant &middot; Fall 2018</span></li>
+        <li><span class="c">Programming Practices for Research Students</span><span class="d">PhD short course &middot; R module &middot; 2018</span></li>
+        <li><span class="c">Supervision of Bachelor and Master Theses</span><span class="d">Fall 2017</span></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <address>
+          University of Stavanger Business School<br>
+          Kjell Arholms gate 23, Office EOJ 245<br>
+          Stavanger, Norway
+        </address>
+        <div>
+          <a class="mail mail-text" href="#contact">dora.simon [at] uis.no</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; Dóra Simon</footer>
+  </main>
+</div>
+<script>
+  // Builds the email address at runtime so simple spam scrapers don't find it in the HTML.
+  var addr = ["dora.simon", "uis.no"].join("@");
+  document.querySelectorAll("a.mail").forEach(function (a) {
+    a.href = "mailto:" + addr;
+    if (a.classList.contains("mail-text")) a.textContent = addr;
+  });
+</script>
+</body>
+</html>
