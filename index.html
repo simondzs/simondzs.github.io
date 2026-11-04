@@ -207,6 +207,23 @@
     .courses .c { font: 500 1.08rem/1.3 var(--serif); display: block; }
     .courses .d { color: var(--muted); font-size: 0.92rem; }
 
+    /* Media */
+    .media { list-style: none; margin: 16px 0 0; padding: 0; }
+    .media li {
+      display: grid; grid-template-columns: 56px 1fr; gap: 0 20px;
+      padding: 16px 0; border-bottom: 1px solid var(--rule);
+    }
+    .media li:last-child { border-bottom: 0; }
+    .media .yr { font: 500 1.05rem/1.5 var(--serif); color: var(--muted); }
+    .media .outlet {
+      font: 600 0.72rem/1 var(--sans); text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--accent); margin: 2px 0 6px;
+    }
+    .media .t { font: 500 1.15rem/1.35 var(--serif); margin: 0; }
+    .media .t a { color: var(--ink); text-decoration: none; }
+    .media .t a:hover { color: var(--accent); }
+    .media .n { color: var(--muted); font-size: 0.95rem; margin: 4px 0 0; }
+
     /* Contact */
     .contact { display: grid; gap: 24px; margin-top: 16px; }
     @media (min-width: 720px) { .contact { grid-template-columns: 1fr 1fr; } }
@@ -252,6 +269,7 @@
     <nav class="toc" aria-label="Sections">
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
+      <a href="#outreach">Policy &amp; Outreach</a>
       <a href="#contact">Contact</a>
     </nav>
   </aside>
@@ -367,6 +385,41 @@
         <li><span class="c">Cross Section and Panel Data Econometrics</span><span class="d">Master &middot; Teaching assistant &middot; Fall 2018</span></li>
         <li><span class="c">Programming Practices for Research Students</span><span class="d">PhD short course &middot; R module &middot; 2018</span></li>
         <li><span class="c">Supervision of Bachelor and Master Theses</span><span class="d">Fall 2017</span></li>
+      </ul>
+    </section>
+
+    <section id="outreach">
+      <h2>Policy &amp; Outreach</h2>
+      <!-- Newest first. To add a blog post, copy the commented entry below and
+           point it to /posts/<short-name>/ (see posts/build.sh). -->
+      <ul class="media">
+        <!--
+        <li><span class="yr">2026</span><div>
+          <p class="outlet">Blog post</p>
+          <p class="t"><a href="posts/short-name/">Title of the post</a></p>
+          <p class="n">One-line description.</p>
+        </div></li>
+        -->
+        <li><span class="yr">2026</span><div>
+          <p class="outlet">VoxDev</p>
+          <p class="t"><a href="https://voxdev.org/topic/energy-environment/how-make-climate-policy-fair-and-efficient-across-countries" target="_blank" rel="noopener">How to make climate policy fair and efficient across countries</a></p>
+          <p class="n">Column with Mathilde Le Moigne, Simon Lepot, and Marcos Ritel on <em>The Distributional Effects of Carbon Pricing Across Countries</em>.</p>
+        </div></li>
+        <li><span class="yr">2025</span><div>
+          <p class="outlet">Dagens Næringsliv</p>
+          <p class="t"><a href="https://www.dn.no/innlegg/toll/handelspolitikk/okonomi/trumps-toll-gjor-verdensokonomien-brunere/2-1-1804143" target="_blank" rel="noopener">Trumps toll gjør verdensøkonomien brunere</a></p>
+          <p class="n">Column on tariffs and emissions (in Norwegian).</p>
+        </div></li>
+        <li><span class="yr">2025</span><div>
+          <p class="outlet">Norwegian Ministry of Trade, Industry and Fisheries</p>
+          <p class="t">The effects of Trump&rsquo;s trade policy on Norway</p>
+          <p class="n">Study for the Ministry.</p>
+        </div></li>
+        <li><span class="yr">2023</span><div>
+          <p class="outlet">forskning.no</p>
+          <p class="t"><a href="https://www.forskning.no/klima-mat/a-kjope-lokalt-dyrket-tomat-er-ikke-baerekraftig/2280449" target="_blank" rel="noopener">Å kjøpe lokalt dyrket tomat er ikke bærekraftig</a></p>
+          <p class="n">Coverage of my Kåkånomics talk <em>To Beef or Not To Beef: Sustainable eating</em> (in Norwegian).</p>
+        </div></li>
       </ul>
     </section>
 

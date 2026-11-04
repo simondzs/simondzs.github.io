@@ -1,0 +1,92 @@
+/* Styles for standalone posts in /posts/. Colors and fonts match index.html. */
+:root {
+  --paper: #f7f5f0;
+  --card: #fffdf9;
+  --ink: #1c1f1d;
+  --muted: #5c625e;
+  --rule: #dfdad0;
+  --accent: #2f5d50;
+  --accent-soft: #e4ece7;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131615;
+    --card: #1a1e1c;
+    --ink: #e8e6e1;
+    --muted: #a2a8a4;
+    --rule: #2d3330;
+    --accent: #8cc2ab;
+    --accent-soft: #1f2d28;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 18px/1.7 var(--serif);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+
+.post {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+.back {
+  font: 500 0.92rem/1 var(--sans);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 48px;
+}
+.back:hover { text-decoration: underline; }
+
+.post-header { border-bottom: 2px solid var(--accent); padding-bottom: 16px; margin-bottom: 32px; }
+.post-header h1 {
+  font: 500 2.4rem/1.15 var(--serif);
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+.post-header .subtitle { font: italic 400 1.25rem/1.45 var(--serif); margin: 0 0 12px; }
+.post-header .meta { font: 400 0.92rem/1.4 var(--sans); color: var(--muted); margin: 0; }
+
+.post-body h2 {
+  font: 500 1.6rem/1.25 var(--serif);
+  color: var(--accent);
+  margin: 2.2em 0 0.5em;
+}
+.post-body h3 {
+  font: 600 0.85rem/1 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin: 2.2em 0 0.8em;
+}
+.post-body img, .post-body svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.post-body figure { margin: 2em 0; }
+.post-body figcaption { font: 400 0.9rem/1.5 var(--sans); color: var(--muted); margin-top: 8px; text-align: center; }
+.post-body blockquote {
+  margin: 1.5em 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+}
+.post-body code { font-size: 0.88em; background: var(--accent-soft); padding: 1px 5px; border-radius: 3px; }
+.post-body table { border-collapse: collapse; font: 400 0.95rem/1.4 var(--sans); margin: 1.5em auto; }
+.post-body th, .post-body td { padding: 6px 12px; border-bottom: 1px solid var(--rule); text-align: left; }
+.post-body hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5em 0; }
+.post-body .footnotes { font: 400 0.9rem/1.5 var(--sans); color: var(--muted); }
+
+footer {
+  font: 400 0.85rem/1.4 var(--sans);
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  margin-top: 56px;
+  padding-top: 20px;
+}

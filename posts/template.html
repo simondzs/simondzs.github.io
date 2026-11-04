@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$title$ | Dóra Simon</title>
+$if(description)$
+  <meta name="description" content="$description$">
+  <meta property="og:description" content="$description$">
+$endif$
+  <meta property="og:title" content="$title$">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://simondzs.github.io/assets/images/dora-simon.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' fill='%23f7f5f0' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/post.css">
+$if(math)$
+  $math$
+$endif$
+</head>
+<body>
+<article class="post">
+  <a class="back" href="/#outreach">&larr; Dóra Simon</a>
+  <header class="post-header">
+    <h1>$title$</h1>
+$if(subtitle)$
+    <p class="subtitle">$subtitle$</p>
+$endif$
+    <p class="meta">Dóra Simon$if(date)$ &middot; $date$$endif$</p>
+  </header>
+  <div class="post-body">
+$body$
+  </div>
+  <footer>&copy; Dóra Simon &middot; <a href="/">simondzs.github.io</a></footer>
+</article>
+</body>
+</html>
